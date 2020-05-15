@@ -6,11 +6,10 @@ from sql_queries import create_table_queries, drop_table_queries
 """
 Drop existing tables from sparkify database
 cur: connect to DB, execute SQL commands
-conn: connection to DB - sparkDB
+conn: connection to DB
 Executes SQL DROP tables in the beginning if the tables already exist.
-That way, running this script(create_tables.py) to reset your database and test ETL pipeline.
+That way, running this script(create_tables.py) to reset the database and test ETL pipeline.
 """
-
 def drop_tables(cur, conn):
     for query in drop_table_queries:
         cur.execute(query)
@@ -28,8 +27,7 @@ def create_tables(cur, conn):
         
         
 """
-Connect to Redshift (Amazon Cloud DWH), create new DB - sparkDB, drop and create tables.
-
+Connect to Redshift (Amazon Cloud DWH), create new DB, drop and create tables.
 """
 
 def main():
@@ -37,7 +35,6 @@ def main():
     config.read('dwh.cfg')
     
     # Load Parameters from the config file.
-
     KEY                = config.get('AWS','KEY')
     SECRET             = config.get('AWS','SECRET')
 

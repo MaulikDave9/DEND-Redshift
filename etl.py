@@ -11,7 +11,7 @@ def load_staging_tables(cur, conn):
         conn.commit()  
     print("Stage tables loaded.\n")
 
-
+    
 """
 Load data from staging tables analytics tables on Redshift
 """
@@ -19,12 +19,11 @@ def insert_tables(cur, conn):
     for query in insert_table_queries:
         cur.execute(query)
         conn.commit()
-    print("insering tables done.\n")
+    print("Insering tables done.\n")
     
     
 """
-Connects to Sparkify redshift datase, loads log_data and song_data into the staging tables,
-tranform into the five analytics tables.
+Connects to redshift datase, calls functions to load staging and other tables.
 """
 def main():
     config = configparser.ConfigParser()
