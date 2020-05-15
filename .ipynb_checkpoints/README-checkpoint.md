@@ -9,7 +9,7 @@ This project builds an ETL pipeline to extrat the data from S3, stage in Redshif
 
     1. Fact and dimension tables
     
-     ![event datafile new Image](images/log-data.png)
+     ![log-data](images/log-data.jpg)
     
     
     2. Redshift cluster, IAM Role
@@ -27,9 +27,11 @@ This project builds an ETL pipeline to extrat the data from S3, stage in Redshif
 
 2. Analytic Tables can be leveraged to find insights very fast:
    Using query Editor in AWS Redshift console,
-   
-   ![Query 2] (images/Query2.png)
-   
+  
+   ![query 1](images/query1.jpg)
+   ![query 2](images/query2.jpg)
+  
+  
 ## Files
 
 (1) create_table.py: fact and dimension tables for the star schema in Redshift.
