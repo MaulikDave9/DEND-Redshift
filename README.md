@@ -7,12 +7,12 @@ and metadata on the songs in the app.  This project builds an ETL pipeline to ex
 stage in Redshift (Amazon cloud data warehouse) into set of dimentional tables.  This will enable
 analytics team to query this tables and find the insight such as what songs users are interested in.  
 
-## Database schema design 
+## Database 
 
 ### Fact Tables
         
     1. songplays - record in event data with songplays
-
+    
 ### Dimension Tables
 
     2. users - users in the app
@@ -20,7 +20,12 @@ analytics team to query this tables and find the insight such as what songs user
     4. artists - artists in music database
     5. time - timestamps of records in songplays
     
-    
+### Star Schema
+
+songplays is a fact table and it has all the primary keys for other dimension tables - users, songs, artists, time.
+
+![ERD1](images/ERD1.jpg)
+
 ### ETL pipeline
 
     1. Load data from S3 to staging tables on Redshift
