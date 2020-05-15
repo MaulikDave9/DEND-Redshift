@@ -37,9 +37,9 @@ analytics team to query this tables and find the insight such as what songs user
     2. Analytic Tables can be leveraged to find insights very fast.
        Using query Editor in AWS Redshift console,
   
-       ![query 1](images/query1.jpg)
+![query 1](images/query1.jpg)
    
-       ![query 2](images/query2.jpg)
+![query 2](images/query2.jpg)
   
   
 ## Files
